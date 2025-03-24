@@ -1,0 +1,439 @@
+DAY:- 1
+==============================================================================================================
+Operating Systems:-
+--------------------
+---> An Operating System(OS) is a program that manages the computer hardware
+---> It acts as an intermediary or (Bridge) between computer User and Computer Hardware
+
+Types Of OS:-
+--------------
+1)Batch OS
+2)Time Sharing OS
+3)Distributed OS
+4)Network OS
+5)Real Time OS
+6)Multi Programming/Processing/Tasking OS
+
+Functions Of OS:-
+-----------------
+--->It is an interface Between User & Hardware
+--->Allocation of Resources
+--->Management Of Memory
+
+Goals of OS:-
+---------------
+1)Convenance
+2)Efficiency
+3)Both
+===============================================================================================================
+DAY:- 2
+================================================================================================================
+STORAGE STRUCTURE IN OS:-
+------------------------
+🔵 What is Storage Structure?
+---------------------------
+In an operating system, storage structure refers to how data is organized and managed across various storage devices. These devices can be volatile (temporary) or non-volatile (permanent). The OS handles this hierarchy to store, retrieve, and manage data efficiently.
+
+🔵 Types of Storage in OS:
+1. Primary Storage (Main Memory)
+----------------------------------
+Also called: RAM (Random Access Memory)
+
+Characteristics:
+-------------------
+Fast access speed.
+
+Volatile (data is lost when power is off).
+
+Directly accessible by the CPU.
+
+Purpose:
+
+Stores data and instructions that are currently in use.
+
+2. Secondary Storage
+-----------------------
+Examples: Hard Disk Drive (HDD), Solid State Drive (SSD)
+
+Characteristics:
+-----------------------
+Non-volatile (data persists even when power is off).
+
+Slower than RAM but has much larger capacity.
+
+Purpose:
+-----------
+Stores the OS itself, applications, files, and other data permanently.
+
+3. Tertiary Storage
+---------------------
+Examples: Optical disks (CD, DVD), magnetic tapes.
+
+Characteristics:
+--------------------
+Used for backup and archival.
+
+Slower access compared to primary and secondary storage.
+
+Purpose:
+-----------------
+Long-term storage, not frequently accessed.
+
+4. Cache Memory
+------------------
+Located: Inside or very close to the CPU.
+
+Characteristics:
+
+Extremely fast and small in size.
+
+Volatile.
+
+Purpose:
+-----------
+Stores frequently used data and instructions to speed up processes.
+
+5. Registers
+--------------
+Located: Inside the CPU.
+
+Characteristics:
+
+Fastest memory.
+
+Very small size (a few bytes).
+
+Purpose:
+--------------
+Temporarily hold data being processed by the CPU.
+
+6. Virtual Memory
+-------------------
+Concept:
+-----------
+A portion of the secondary storage (usually the hard drive) is used as an extension of RAM.
+
+Purpose:
+-----------
+Allows systems to run larger programs than the available physical RAM by swapping data between RAM and disk.
+
+🔵 Storage Hierarchy Diagram:
+--------------------------------
+Registers (Fastest, Smallest)
+   ↓
+Cache Memory
+   ↓
+Primary Storage (RAM)
+   ↓
+Secondary Storage (HDD/SSD)
+   ↓
+Tertiary Storage (CD/DVD/Tape)
+
+COMPUTER SYSTEM ARCHITECTURE:-
+------------------------------
+
+--->Types Of Computer Systems based on number of General Purpose Processors
+
+1️⃣ Single-Processor System
+--------------------------
+👉 What is it?
+A computer with only ONE processor (CPU).
+
+👉 How does it work?
+
+Only one processor handles all tasks.
+
+It runs one process at a time (although switching happens fast, so it feels like multitasking).
+
+👉 Simple Example:
+
+Your old desktop PC or basic laptops (before multi-core CPUs became common).
+
+Microcontrollers in washing machines or microwaves.
+
+2️⃣ Multiprocessor System
+----------------------------
+👉 What is it?
+A computer with TWO or MORE processors (CPUs) inside the same system, working together.
+
+👉 How does it work?
+
+All processors share the same memory and communicate closely.
+
+They work in parallel to make the system faster.
+
+👉 Simple Example:
+
+Modern servers used in companies (they may have 2, 4, or more processors).
+
+Gaming consoles (PlayStation, Xbox) – they have multiple processing units.
+
+Some high-end PCs have motherboards with dual CPUs.
+
+3️⃣ Clustered System
+------------------------
+👉 What is it?
+A group of separate computers (nodes) connected together to work as a single system.
+
+👉 How does it work?
+
+Each computer (node) has its own processor, memory, and storage.
+
+They are connected using a network (LAN or special high-speed connections).
+
+Used when you need powerful processing or failover (backup).
+
+👉 Simple Example:
+
+Google data centers (thousands of computers working together as a cluster).
+
+HPC (High-Performance Computing) clusters used in weather forecasting.
+
+Web server clusters that run big websites (e.g., Amazon or Netflix backend).
+
+====================================================================================================================================================================================
+DAY3:-
+=====================================================================================================================================================================================
+
+OPERATING SYSTEM STRUCTURE
+---------------------------
+Multiprogramming:-
+------------------------
+--->Multiprogramming loads multiple programs into memory to improve CPU utilization.
+
+--->Only one program runs at a time, but others wait for CPU or I/O.
+
+--->When Program A waits for disk I/O, CPU switches to Program B.
+
+--->Example: A payroll system prints pay slips while compiling a report at the same time.
+
+--->CPU scheduling chooses which program runs next (e.g., FIFO, SJF).
+
+--->It reduces CPU idle time but no user interaction happens during processing.
+
+--->Found in early systems like IBM OS/360 for batch jobs.
+
+Multitasking:-
+-----------------
+--->Multitasking allows users to run multiple applications at once.
+
+--->CPU quickly switches between tasks to give the illusion they run simultaneously.
+
+--->Example: A user edits a document, listens to Spotify, and downloads a file together.
+
+--->Each task gets a time slice before the CPU switches to the next.
+
+--->Supports both foreground (active) and background (passive) processes.
+
+--->Common in modern OS like Windows, Linux, or macOS.
+
+--->Ensures system remains interactive and responsive for the user.
+
+OPERATING SYSTEM SERVICES:-
+----------------------------
+1. Program Execution
+----------------------
+--->The OS loads programs into memory and executes them.
+
+--->It provides mechanisms to stop, start, and resume programs.
+
+2. I/O Operations:-
+--------------------
+--->OS manages input and output devices (e.g., keyboard, disk, printer).
+
+--->It provides a uniform interface for performing I/O tasks.
+
+3. File System Manipulation:-
+------------------------------
+--->The OS allows programs to read, write, create, and delete files.
+
+--->It manages file storage, access permissions, and directories.
+
+4. Communication:-
+------------------
+--->Enables processes to communicate using shared memory or message passing.
+
+--->Used in both single-system and networked environments.
+
+5. Error Detection:-
+-------------------
+--->OS detects and handles hardware or software errors during execution.
+
+--->It ensures proper functioning by reporting or correcting errors.
+
+6. Resource Allocation:-
+------------------------
+--->OS allocates CPU, memory, I/O devices, etc., to programs.
+
+--->It ensures efficient and fair resource distribution among processes.
+
+7. Security and Protection
+-----------------------------
+--->Protects system resources from unauthorized access.
+
+--->Implements authentication, access control, and data encryption.
+
+==============================================================================================================================================================================================
+DAY-4
+==============================================================================================================================================================================================
+User Operating System Interface:-
+--------------------------------
+An Operating System Interface is the way users and programs interact with the operating system. It provides access to the system's hardware and software resources.
+
+There are mainly two types of OS interfaces:
+--------------------------------------------
+1. Command-Line Interface (CLI):
+---------------------------------
+Users interact with the OS by typing text commands.
+
+It is powerful but requires knowledge of commands (e.g., Linux Terminal, Windows Command Prompt).
+
+Example: Typing cd to change directories or ls to list files.
+
+2. Graphical User Interface (GUI):
+------------------------------------
+Users interact through graphical elements like windows, icons, and buttons.
+
+Easier for beginners and common in modern OS like Windows, macOS, and Ubuntu.
+
+Example: Clicking folders, dragging files, or using menus.
+
+System Calls:-
+-----------------
+System Calls are the interface between a program (user-level) and the operating system (kernel-level).
+They allow user programs to request services (e.g., file access, process management) from the OS.
+
+When a user program needs hardware resources (e.g., disk, memory), it cannot access them directly.
+Instead, it makes a system call to let the OS perform the action safely.
+
+Two Relatable Modes:
+---------------------
+User Mode:-
+-------------------
+The program runs with limited access to system resources.
+
+Example: When you write code in C, your program runs in user mode.
+
+Kernel Mode (Supervisor Mode):-
+--------------------------------
+
+The OS has full access to hardware and critical system areas.
+
+Example: When your program calls open() to access a file, the OS switches to kernel mode to handle it.
+
+Types of System Calls with Functions:-
+-------------------------------------------
+1. Process Control System Calls:-
+-----------------------------------
+These are used to create, manage, or terminate processes.
+
+Functions:
+
+fork(): Creates a new child process.
+
+exec(): Replaces the current process image with a new program.
+
+exit(): Terminates a process.
+
+wait(): Waits for a child process to finish.
+
+2. File Management System Calls:-
+-----------------------------------
+Used to create, open, read, write, and close files.
+
+Functions:
+
+open(): Opens a file for reading/writing.
+
+read(): Reads data from a file.
+
+write(): Writes data to a file.
+
+close(): Closes an opened file.
+
+3. Device Management System Calls:-
+------------------------------------
+These control hardware devices like printers or disks.
+
+Functions:
+
+ioctl(): Performs device-specific operations (e.g., control device settings).
+
+read(): Reads data from a device (e.g., keyboard input).
+
+write(): Sends data to a device (e.g., printer output).
+
+4. Information Maintenance System Calls:-
+-----------------------------------------
+Used to get or set system-related information.
+
+Functions:
+
+getpid(): Gets the current process ID.
+
+alarm(): Sets an alarm clock for sending a signal after a time interval.
+
+sleep(): Delays a process for a specific time.
+
+5. Communication System Calls (Interprocess Communication - IPC):-
+-------------------------------------------------------------------
+Used to send and receive data between processes.
+
+Functions:
+
+pipe(): Creates a communication pipe between processes.
+
+shmget(): Allocates shared memory segment.
+
+send() / recv(): Used for sending and receiving messages over sockets.
+
+===============================================================================================================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
