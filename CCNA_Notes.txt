@@ -1,0 +1,254 @@
+Network:-
+
+---> A Network is a Digital Communication Network which allows nodes to share resources
+
+Client:-
+
+---> A Client is a Device that access a Service made available by a server
+
+Server:-
+
+---> A Server is a device that provides function or service for clients
+
+Switch:-
+
+---> Switches forward the traffic within the LAN
+
+Router:-
+
+---> Routers provides Connectivity between LANs
+---> Routers are used to forward traffic over the network
+
+Firewall:-
+
+---> A firewall monitors and Control the traffic based on Configured rules
+===========================================================================
+
+---> Speed is measured in bits per Second not bytes per second
+
+
+Networking Model:-
+
+---> Networking model Provide a Structure for networking protocols and Standards
+
+---> OSI --> Open Systems Interconnection
+---> Devoloped by International Organization for Standardization(ISO)
+
+---> The process of adding headers and trailers is called Encapsulation
+
+---> The process of removing headers and trailers is called De-Encapsulation
+
+
+
+Application Layer:-
+
+--->Interacts with software applications, for example your web browser (Chrome,firefox etc)
+
+---> HTTP and HTTPS are layer 7 Protocols
+
+Presentation Layer:-
+
+---> The presentation Layers job is to translate between application and network formats
+
+Session Layer:-
+
+---> It establishes, manages and terminates connections between the local application
+(for example web browser) and the remote application(for example youtube)
+
+Transport Layer:-
+
+---> Breaks large pieces of data into smaller segments which can be more easily sent over the network and are 
+less likely to cause transmission problems
+
+---> provides host-to-host Communication
+
+Network Layer:-
+
+---> Provides connectivity between end hosts on different networks (Outside of the LAN)
+
+--->Provides Logical addressing(IP address) and path selection between source and destination
+
+Data Link Layer:-
+
+
+---> Provides node-to-node Connectivity and data transfer (for example, PC to Switch, Switch to router,
+,router to router)
+
+---> detects and corrects Physical Layer Errors
+
+Physical Layer:-
+
+--->Defines Physical Characteristics of the medium used to transfer data between devices
+
+--->For example voltage levels, physical connectors, cable specifications
+
+Adjacent Layer Interaction:-
+
+---> Interaction between different layers of the OSI model
+
+Same Layer Interaction:-
+
+---> Refers to the interaction between the same layers on different hosts
+
+
+Mac Address:-
+
+---> 6 Byte Physical Address Assigned to the device when it is made, it is globally unique
+
+Unicast Frame:-
+
+---> A Frame Destined For a Single target
+
+What is Receiver Clock Synchronization?
+--->When data is sent over a network (especially over physical cables), it is sent as a stream of bits — 1s and 0s — in the form of electrical signals, light pulses, or radio waves.
+
+--->To understand these bits correctly, the receiver must know:
+
+--->When each bit starts and ends.
+
+Address Resolution protocol(ARP):-
+
+--->ARP is used to discover the Layer 2 address (MAC address) of a known Layer 3 address(IP address)
+
+
+Ping:-
+
+---> Ping is a Network Utility that is used to test reachability between two devices
+---> Measures Round-trip time
+
+Loopback Address:-
+
+---> Address range 127.0.0.0 - 127.255.255.255
+---> Used to test the 'network stack' (think OSI, TCP/IP model) on the local Device
+
+
+Half Duplex:-
+
+---> The device cannot send and receive data at the same time. if it is receiving a frame, it must wait before sending a frame
+
+Full Duplex:-
+
+---> The device can send and receive data at the same time.
+
+Carrier Sense Multiple Access with Collision Detection(CSMA/CD)
+
+---> It describes how devices avoid collisions in half duplex communication and how they react if Collisions occur
+
+Speed and Duplex Auto negotiation:-
+
+---> Which allows devices to find the appropriate speed and duplex settings without manual Configuration
+
+Local Area Network(LAN):-
+
+--->A LAN is a single Broadcast Domain (A broadcast domain is a group of devices that will receive a broadcast frame(Dest MAC:- FFFF.FFFF.FFFF) sent by any one of the members
+
+Virtual Local Area Network(VLAN):-
+
+--->VLAN's divides the single broadcast domain into multiple broadcast domains
+--->VLAN's logically separate end hosts at layer2
+
+Access port:-
+
+--->An access port is a switchport which belongs to a single VLAN, and usually connects to end hosts like PCs
+
+Trunk Port:-
+
+--->Trunk Ports can carry multiple VLANs on a single interface
+
+Router On a Stick(ROAS):-
+
+ROAS is used to route between multiple VLANs using a single interface on the router and switch
+
+Dynamic Trunking Protocol(DTP):-
+
+---> DTP is a Cisco proprietary protocol that allows Cisco Switches to dynamically determine their interface status (access or trunk) without manual configuration
+
+VLAN Trunking Protocol(VTP):-
+
+--->VTP allows you to configure VLANs on a central VTP server switch, and other switches (VTP Clients) will synchronize their VLAN database to the server
+
+danger of VTP:-
+
+---> If we connect an old switch with a higher revision number to your network (and the VTP domain name matches) all switches in the domain will sync their VLAN database to that switch
+
+Spanning Tree Protocol(STP):-
+
+--->STP Prevents Layer2 Loops by placing redundant ports in blocking state, essentially disabling the interface.
+
+STP states:-
+
+1)Blocking
+2)Listening
+3)Learning
+4)Forwarding
+
+STP Timers:-
+
+1)Hello Timer(2sec)
+2)Forward Delay Timer(15 sec)
+3)Max Age Timer(20 Sec)
+
+STP TOOLKIT:-
+
+1)Port fast:- Port fast allows a port to move forwarding state, bypassing Listening and Learning states
+
+2)BPDU GUARD:- If an interface with BPDU Guard enabled receives a BPDU from another switch, the interface will be shutdown to prevent a loop from forming
+
+EtherChannel:-
+
+---> EtherChannel Combines a multiple physical interfaces into a single logical interface. This will increases and network speed and Bandwidth.
+
+
+Routing by rumour:-
+
+--->Each router tells only its neighbouring routers what it knows about the network, and those neighbours pass the information along to their neighbours — like spreading a rumour.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

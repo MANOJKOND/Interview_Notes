@@ -1,0 +1,759 @@
+------------------------------------------------------------------
+Section -3 Introduction to Cloud Computing
+
+1) What is Cloud Computing
+
+2)Types Of Clouds
+
+3)Service Models
+
+4)AWS Overview(Regions,Availability Zones, Edge Locations)
+
+5)Shared Responsibility Model
+
+6)Characteristics of Cloud Computing(OBMRM) 
+
+7)Advantges of Cloud
+	Trade CAPEX( CapEx refers to large, upfront investments in physical assets like servers, data centers, and networking hardware.) for OPEX(OpEx refers to ongoing, pay-as-you-go expenses for services and resources.)
+	Benefit from massive economies of scale 
+	Stop guessing capacity
+	Increase speed and agility 
+	Stop spending money running and maintaining data centers
+	Go global in minutes
+8) 3 Pricing Fundamentals
+
+  1)Storage 
+  2)Compute
+  3)Data Transfer Out of the cloud
+ 
+------------------------------------------------------------------
+Section -4   IAM
+
+
+1) Users, groups, Roles, Policies
+
+2) MFA, Accesskeys
+
+3) Security Tools(Last Access Advisor, Credintial report)
+
+4)Shared Responsibility Model 
+
+----------------------------------------------------------------
+
+Section -5 EC2
+
+1)EC2 Basics
+
+2)EC2 Instance Types(General purpose(t,m), Storage Optimized(i),Memory Optimized(R), Compute Optimized(C)
+
+3)Security Groups & Ports
+
+4)SSH
+
+5)Ec2 Instance Roles
+
+6)EC2 Purchasing Options(On demand, Reserved, saving plans, spot instances, dedicated hosts)
+
+7)Shared Responsibility Model 
+
+8)IP Address Charges
+
+
+----------------------------------------------------------------
+
+Section -6 EC2 Instance Storage
+
+1)EBS
+
+2)EBS Snapshots(&Recycle Bin)
+
+3)AMI (& Backups & Recycle Bin)
+
+4)EFS
+
+5)EC2 Image Builder(Automatically create,test,manage nd terminate EC2 Instances)
+
+6)EC2 Instance Store(An EC2 Instance Store is a temporary storage type attached directly to an Amazon EC2 instance. It provides high-speed storage for short-lived data, but the data is lost if the instance is stopped, terminated, or fails. It’s ideal for use cases like caches, buffers, or temporary processing tasks.)
+
+7)Amazon FSx(Amazon FSx is like a shared folder in the cloud where multiple computers or servers can store and access files together. Or Amazon FSx is a fully managed file storage service that provides shared file systems for applications. Think of it like a network drive that multiple computers can access and store files on.)
+
+8)Shared Responsibility Model 
+
+-----------------------------------------------------------------
+
+Section -8 S3
+
+1)S3 Overview
+
+2)Bucket policies(Security)
+
+3)Versioning
+
+4)Replication(CRR&SRR)
+
+5)S3 Static Website
+
+6)S3 Storage Classess
+
+7)S3 Encryption
+
+8)IAM access Analyzer for S3(It is monitoring feature for our S3 Bucket objects like bucket policies, acls etc)
+
+9)Shared Responsibility Model
+
+10)Snow Ball Family(Edge computing means processing data closer to where it is generated instead of sending it to a cloud server. This is useful in places where internet connectivity is slow, expensive, or unreliable.)   
+
+
+	Compute Optimized – More power for processing and running applications.
+	ex:-AI/ML processing, analytics, real-time processing
+	
+	Storage Optimized – More storage space for large data transfers.
+	ex:-Data backup, video transfer, big file migration
+
+
+11)Amazon Storage Gateway(AWS Storage Gateway is a hybrid cloud storage service that connects your on-premises storage (local servers, data centers) with AWS cloud storage (like S3, EBS, or Glacier). It helps businesses move data to AWS without disrupting existing applications.)
+
+--------------------------------------------------------------------
+
+Section -9 DataBases
+
+1)Databases introduction
+
+2)RDS && Aurora(MYSQL,POSTGREESQL)
+
+3)RDS Deployment Options(Read Replica, MultiAz, Cross Region)
+
+---->RDS Multi-AZ deployments’ main purpose is high availability, and RDS Read replicas’ main purpose is scalability. Moreover, Multi-Region deployments’ main purpose is disaster recovery and local performance.
+
+
+4)Amazon Elastic Cache(In-Memory Database for RDS (Redis,Memecached))
+
+5)Dynamo DB(Dynamo Db Accelerator(DAX) -->In Memory cache for Dynamo Db)-->(So you would be looking for keywords in your exam, such as serverless and low latency. For example, single digit millisecond latency.)
+
+6)Dynamo Db--(Global Tables for low latency(Replication))
+
+7)Amazon Redshift(for OLAP && data Warehousing and it is a columnar storage of data)
+
+8)Amazon EMR (for Creating Hadoop Clusters(Big Data)and to analyse it)
+
+9)Amazon Athena(Amazon Athena is an interactive query service that makes it easy to analyze data in Amazon S3 using standard SQL. Athena is serverless, so there is no infrastructure to manage, and you pay only for the queries that you run.)
+
+10) Amazon QuickSight(it's a serverless, machine learning-powered business intelligence service to create interactive dashboards on our databases)
+
+11)Document DB or Mongo DB(it is another no SQL database)
+
+12)Amazon Neptune(Neptune is a fully-managed graph database.)
+
+13)Amazon Timestream(it's a database that is fully managed, fast, scalable and serverless for time series data.)
+
+14)Amazon Managed Blockchain( a service to join a public Blockchain networks or create your own scalable private network  --->if you see anything related to Blockchains or Hyperledger fabric or Ethereum, you have to think Amazon managed Blockchain and "decentralized")    
+
+15)AWS Glue(AWS Glue is a fully managed extract, transform, and load (ETL) service that makes it easy for customers to prepare and load their data for analytics.
+)
+
+16)Database Migration Service(DMS)(Migrating Data from one database to another database)
+
+17)QLDB(anytime you see financial transactions and ledger, think QLDB. "Centralized")
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Section -10 Compute Services
+
+1)ECS(elastic container service)(this is used to launch(run) the docker containers. for ECS, you must provision and maintain the infrastructure yourself(EC2).)
+
+2)Fargate(Fargate is also used to launch docker containers on AWS.i fargate we don't need to provision any infrastructure.(EC2))
+
+3)ECR(elastic container registry)(It is a private docker registry on AWS,and this is where you're going to store you docker images)
+
+4)EKS(Elastic Kubernetes Service)(this allows you to launch and manage Kubernetes cluster on AWS.)
+
+5)AWS Lambda(going to pay per request and per compute time.)
+
+6)Amazon API Gateway(which creates a server less HTTP API)
+
+7)AWS Batch(batch is a fully managed batch processing service that can allow you to do batch processing at any scale.)
+
+8)Amazon Lightsail(it is kind of a stand-alone service So with Lightsail, you can get virtual servers,storage,databases and networking at one place So Lightsail really the intent of it from AWS is for people that have little cloud experience)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Section -11  Deploying And Managing Infrastructure
+
+1)Cloud Formation(CloudFormation is going to be used when we have infrastructure as code, when we need to repeat an architecture in different environments, different regions, or even different AWS accounts.)
+
+2)AWS Cloud Development Kit(CDK)(this is a way for you to define your cloud infrastructure using a familiar programming language)
+
+3)Elastic Beanstalk( Elastic Beanstalk is a developer centric view of deploying an application on AWS.)(3 architecture Models:- 1)Single instance, 2)LB+ASG 3)ASG only)
+
+4)AWS CodeDeploy(CodeDeploys is also a way for us to deploy our application automatically.  the difference that CodeDeploy is a bit more permissive.It doesn't need to be using Beanstalk or CloudFormation.)
+
+5)Code Commit(CodeCommit is a way for you to store your code within AWS in a version control repository.)
+
+6)AWS CodeBuild(it allows you to build your code in the cloud. That means that the source course is going to be compiled, the tests are going to be run,and then the output of which is going to produce packages, and these packages are going to be ready to be deployed for example, by CodeDeploy)
+
+7)AWS CodePipeline(CodePipeline is going to be a way for us to orchestrate the different steps to have the code automatically pushed to production)
+
+8)AWS CodeArtifact(CodeArtifact is going to be very helpful if your team needs a artifact management system or a place to store their code dependencies.)
+
+9)AWS Systems Manager(SSM)(SSM (AWS Systems Manager) helps you manage your fleet of EC2 instances, meaning it allows you to control and automate administrative tasks for multiple instances from one place without needing to log into each instance individually.)
+
+10)SSM Session Manager feature of Systems Manager(this allows you to start a secure shell on your EC2 instances and on-premises servers)
+
+11)SSM Paramter Store( it's a way for you to store configuration and secrets)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Section -12   Leveraging the global Infrastructure
+
+1)Route53
+	Routing Policies:
+	simple routing policy(No Healthchecks)
+	weighted routing policy(Healthchecks)
+	Latency routing policy(Healthchecks)
+	Failover routing policy(Healthchecks)
+
+2)CloudFront
+
+3)S3 transfer acceleration(Amazon S3 Transfer Acceleration enables fast, easy, and secure transfers of files over long distances between your client and an S3 bucket. Transfer Acceleration takes advantage of Amazon CloudFront’s globally distributed edge locations. As the data arrives at an edge location, data is routed to Amazon S3 over an optimized network path.)
+
+4)AWS Global Accelerator(It is used to improve the global application availability and performance using the AWS global network.it improves the network performance)
+
+5)AWS Wavelength(AWS Wavelength is an AWS Infrastructure offering optimized for mobile edge computing applications. Wavelength combines the high bandwidth and ultra-low latency of 5G networks with AWS compute and storage services to enable developers to innovate and build a whole new class of applications.)
+
+6)AWS Wavelength:-
+
+--->AWS Wavelength is a unique AWS service that brings AWS cloud services closer to mobile users and devices through 5G networks.
+
+--->AWS Wavelength is designed to run applications with very low latency (1-10 milliseconds) by placing AWS infrastructure inside telecom companies' 5G networks.
+
+---> This means your application servers are not in AWS regions but are deployed inside the telecom operator’s data center (like Airtel, Verizon, Vodafone, etc.).
+
+7)AWS Local Zones
+
+--->which allows you to place compute storage database and other services that are selected by database closer to end users, to run latency sensitive applications
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Section-13   Cloud Integrations
+
+1)Amazon SQS(Amazon SQS is a message queue service provided by AWS (Amazon Web Services). Think of it as a temporary storage system for messages between different parts of a system or between different systems.)
+
+2)Amazon Kinesis(Managed service to collect,process and analyse real-time streaming data at any scale)
+
+3)Amazon datawarehouse(Load kinesis data streams into s3,redshift etc)
+
+3)Amazon SNS(Amazon SNS is a messaging service provided by AWS (Amazon Web Services) that allows you to send notifications or messages to multiple subscribers (receivers) at once. It’s like a broadcasting system where one message can be sent to many people or systems simultaneously.)
+
+4)Amazon MQ(Amazon MQ is a managed message broker service provided by AWS. It supports industry-standard messaging protocols like MQTT, AMQP, STOMP, OpenWire, and WebSocket)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Section -14  Cloud Monitoring
+
+1)CloudWatch Metrics(Monitor the performance of AWS services and billing metrics.)
+
+2)CloudWatch Alarms(Alarms are used to trigger notifications for any metric,)
+
+3)Cloudwatch Logs(CloudWatch Logs is a service in AWS that lets you collect, monitor, and analyze log files from AWS services, applications, or custom sources.(A log file is a simple file where important events or messages from software, applications, or systems are recorded. It's like a journal or notebook where computers write down what’s happening.))
+
+4)Amazon EventBridge(It allows services to trigger actions in response to changes or events.)
+
+5)AWS CloudTrail( CloudTrail is a service that provides governance, compliance and audit for your AWS accounts)
+
+6)AWS X-Ray(Visual analysis for our applications --->AWS X-Ray helps developers analyze and debug production, distributed applications, such as those built using a microservices architecture.)
+
+7)Amazon CodeGuru(this is a machine learning-powered service for automated code reviews and application performance recommendations.)
+
+8)AWS Health Dashboard:
+
+--->AWS Health Dashboard provides alerts and remediation guidance when AWS is experiencing events that may impact you.
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Section -15 VPC&NETWORKING
+
+1)VPC Overview(VPC is a Virtual Private Cloud And is a private network for you to deploy your resources in that)
+
+2)Subnets(partition of your network.)
+
+3)Internet Gateway(Internet Gateways helps our VPC instances connect with the internet)
+
+4)NAT Gateway(NAT Gateway(AWS managed)& NAT Instances(Self-managed) allow your instances in your private subnets to access internet while remaning Private)
+
+5)Security Groups(Statefull)
+
+6)Network ACL(A Firewall that is controlling traffic from and to the subnet.)(Stateless)
+
+7)VPC flow logs(VPC flow logs are a log of all the IP traffic going through your interfaces. So you can get a VPC flow log, a subnet flow log or even an Elastic Network Interface flow log to see the traffic going in and out)
+
+8)VPC Peering(VPC peering is to connect two VPC privately using the network from AWS)
+
+9)VPC Endpoints(VPC endpoints are for accessing your services privately within your VPC.)
+
+10)Private Link(AWS Private Link allows you to connect services securely inside AWS without using the public internet.-->Privately Connect to a Service in a Third party VPC)
+
+11)Site-to-Site VPN(on Premises to AWS using public internet and fast Connection)
+
+12)Direct Connect(on Premises to AWS using private network and late(almost 1 month) Connection)
+
+13)Client VPN( the idea is that you have your computer and you want to privately connect into your AWS VPC.-->open Connection from our Computer into our VPC)
+
+14)Transit Gateway(So when in the exam, you see a way to connect hundreds or thousands of VPC together, with as well your on-premise infrastructure, think TGW)
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Section -16 Security && Compliance
+
+[[[1) AWS Shield Standard:
+
+--->protects against DDOS attack for your website and applications, for all customers at no additional costs
+---> Provides protection from attacks such as SYN/UDP Floods, Reflection attacks and other layer 3/layer 4 attacks
+
+2) AWS Shield Advanced: 
+
+--->24/7 premium DDoS protection
+---> Optional DDoS mitigation service ($3,000 per month per organization)
+
+3)AWS WAF – Web Application Firewall:-
+
+--->Protects your web applications from common web exploits (Layer 7)]]]
+--->protects from common attack - SQL injection and Cross-Site Scripting(XSS)
+
+4)AWS Network Firewall:-
+
+---> Protect your entire Amazon VPC
+--->From Layer 3 to Layer 7 protection
+
+5)AWS Firewall Manager:-
+
+--->Manage security rules in all accounts of an AWS Organization in a Central Place
+--->So if you see a question around managing your VPC Security Groups across multiple accounts in an organization, think no more than the AWS Firewall Manager.
+
+6)Penetration Testing:-
+
+--->penetration testing is when you're trying to attack your own infrastructure to test your security.
+
+7)Encryption(data) at rest:-
+--->data at rest means that the data is stored or archive on a physical device.
+
+8)Encryption(data) at transit:- 
+--->In transit means that encryption while the data is being moved from one place to another.
+
+9)AWS KMS(Key Management Service):-
+
+--->with KMS, we don't have access to the keys AWS will manage the keys for us, and we just define who can access these keys.
+
+10)Cloud HSM:-
+
+--->with CloudHSM, AWS will just provision to us the encryption hardware,but we are managing the keys ourselves.
+
+11)Types Of KMS Keys:-
+	-->Customer Managed Key
+	-->AWS Managed Key
+	-->AWS Owned Key
+	-->Cloud HSM Keys
+
+12)AWS certificate manager(ACM):-
+
+--->which is a service to easily provision, manage and deploy SSL or TLS certificates.
+--->Used to provide in-flight encryption for websites(HTTPS)
+
+13)AWS Secrets Manager:-
+
+--->this is a newer kind of service and it is meant for storing secrets, as the name indicates.
+--->you can force the rotation of these secrets, I mean, they have to change every X number of days.
+
+14)AWS Artifact:-
+--->It is a portal that will give you the customer access on demand to the compliance reports and AWS agreements.
+
+15)Amazon GuardDuty:-
+
+--->Guard Duty helps you do intelligent threat discovery to protect your AWS accounts.
+--->it uses machine learning algorithm, performs anomaly detection and uses third party data to find these threats.
+
+16)Amazon Inspector:-
+
+--->Amazon Inspector is a security service provided by AWS that automatically checks your applications for vulnerabilities and security issues.
+--->Amazon Inspector is a service that allows you to run automated security assessments on a couple of things.
+	---> For EC2 instances
+	---> For Container images push to Amazon ECR
+	---> For Lambda Functions
+--->the Inspector is only for your running EC2 instances, your Container Images on Amazon ECR and your Lambda functions.
+
+17)AWS Config:-
+
+--->AWS Config is a monitoring service that continuously checks and records your AWS resources' configurations.
+---> Config helps with auditing and recording the compliance of your resources by recording the configuration and their changes over time.
+
+18)AWS Macie:-
+
+--->Amazon Macie is a fully managed data security and data privacy service that uses machine learning and pattern matching to discover and protect your sensitive data in AWS
+--->Macie helps identify and alert you to sensitive data, such as personally identifiable information (PII)
+
+19)AWS Security Hub:-
+
+---> Central security tool to manage security across several AWS accounts and automate security checks
+---> gather Security findings from multiple AWS accounts
+
+20)Amazon Detective:-
+
+--->Guard Duty, Macie, and Security Hub are used to identify potential security issues, or findings
+--->Sometimes security findings require deeper analysis to isolate the root cause and take action – it’s a complex process
+---> Amazon Detective analyzes, investigates, and quickly identifies root cause of security issues or suspicious activities (using ML and graphs)
+---> Automatically collects and processes events from VPC Flow Logs, CloudTrail, GuardDuty and create a unified view
+--->In AWS Security Hub, the Root Cause of Security Issues means the main reason why a security issue happened in your AWS resources.
+
+
+
+21)AWS Abuse:-
+
+--->So in case you are suspecting some resources in AWS, for example, some IPs or some EC2 instances that are used for abusive or illegal purposes, then you can report it to AWS.
+--->AWS Abuse team is a special security team that handles reports of illegal, harmful, or suspicious activities happening on AWS services.
+--->If AWS thinks your service is doing bad activities → AWS Abuse Team will contact you.
+
+22)IAM Access Analyzer:-
+
+--->IAM Access Analyzer automatically checks who can access your AWS resources from outside your AWS account.
+--->It helps to find accidentally shared resources like:
+
+	S3 Buckets
+	IAM Roles
+	KMS Keys
+	Lambda Functions
+
+
+
+
+
+
+
+
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Section-17 Machine Learning
+
+1)Amazon Rekognization
+
+--->Find objects, people, text, scenes in images and videos using ML
+--->Facial analysis and facial search to do user verification, people counting
+---> Create a database of “familiar faces” or compare against celebrities
+
+2)Amazon Transcribe:-
+
+--->Automatically convert speech to text
+--->Uses a deep learning process called automatic speech recognition (ASR) to convert speech to text quickly and accurately
+--->Automatically remove Personally Identifiable Information (PII) using Redaction
+
+3)Amazon Polly:-
+
+--->Turn text into lifelike speech using deep learning
+--->Allowing you to create applications that talk
+
+4)Amazon Translate:-
+
+--->Natural and accurate language translation
+--->Amazon Translate allows you to localize content - such as websites and applications - for international users, and to easily translate large volumes of text efficiently.
+
+5)Amazon Lex: (same technology that powers Alexa)
+
+--->Automatic Speech Recognition (ASR) to convert speech to text
+--->Natural Language Understanding to recognize the intent of text, callers
+--->Helps build chatbots, call center bots
+
+6)Amazon Connect:-
+
+--->Receive calls, create contact flows, cloud-based virtual contact center
+--->Can integrate with other CRM systems or AWS
+--->No upfront payments, 80% cheaper than traditional contact center solutions
+
+7)Amazon Comprehend:-
+
+--->For Natural Language Processing – NLP
+
+8)Amazon Sagemaker:-
+
+--->Fully managed service for developers / data scientists to build ML models
+--->Machine learning process (simplified): predicting your exam score
+
+9)Amazon Kendra:-
+
+--->Fully managed document search service powered by Machine Learning
+--->Extract answers from within a document (text, pdf, HTML, PowerPoint, MS Word, FAQs…)
+
+10)Amazon Personalize:-
+
+--->Fully managed ML-service to build apps with real-time personalized recommendations
+ --->Example: personalized product recommendations/re-ranking, customized direct marketing
+ --->Example: User bought gardening tools, provide recommendations on the next one to buy
+
+11)Amazon Textract:-
+
+--->Automatically extracts text, handwriting, and data from any scanned documents using AI and ML
+--->Read and process any type of document (PDFs, images, …)
+
+
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+Section -18 Billing & Pricing
+
+1) AWS Organizations
+
+--->its a global Service, Allows to manage multiple AWS accounts 
+--->Restrict account privileges using Service Control Policies (SCP)
+
+2)AWS Control Tower:-
+
+--->Easy way to set up and govern a secure and compliant multi-account AWS environment based on best practices
+
+3)AWS Resource Access Manager (AWS RAM):-
+
+--->Share AWS resources that you own with other AWS accounts
+
+4)AWS Service Catalog:-
+
+---> Users that are new to AWS have too many options, and may create stacks that are not compliant / in line with the rest of the organization
+
+---> Some users just want a quick self-service portal to launch a set of authorized products pre-defined by admins
+
+5)Pricing Models in the Cloud(refer pdf)
+
+6)AWS Compute Optimizer:-
+
+--->which is used to reduce costs and improve performance by recommending optimal AWS resources for your workloads.
+--->So it's going to do an analysis of your EC2 instances, your auto scaling groups, and tell you, for example, which one are over-provisioned or under provisioned and then you can build your optimizations.
+
+7)Billing and Costing Tools:-
+	1)estimate cost in the cloud:-
+		--->Pricing Calculator
+	2)Tracking Costa in the Cloud:-
+		--->Billing Dashboard
+		--->Cost Allocation Tags
+		--->Cost and Usage Reports
+		--->Cost Explorer
+	3)Monitoring against cost plans:-
+		--->Billing Alarms
+		--->Budgets
+
+8)AWS Pricing Calculator:-
+
+--->it allows you to estimate the cost for your designated solution architecture.
+
+9)AWS Billing Dashboard:-
+
+--->which will show you all the costs actually for the month,the forecast, and the month-to-date.
+
+10)Cost Allocation Tags:-
+
+--->They will allow us to track our cost on a detail level, and group them together.
+
+11)Cost and Usage Reports:-
+
+---> Cost and Usage Reports (CUR) provide detailed information about your AWS resource usage and associated costs.
+--->AWS will generate the reports automatically every day or month based on your selection.
+
+12)Cost Explorer:-
+--->AWS Cost Explorer is a tool that helps you visualize, track, and analyze your AWS usage and costs over time with interactive graphs and filters.
+
+---->if you're looking for a tool that will allow you to forecast your bill for 12 months ahead, then it's going to be Cost Explorer.
+
+13)Billing Alarms in CloudWatch
+
+14)Budgets:-
+
+--->budgets are very helpful to send alarms when costs exceed the budget, or when a forecast also exceeds the budget.
+
+15)AWS Cost Anomaly Detection:-
+
+--->this continuously monitors your cost and usage data, and it will use machine learning to detect unusual spends.
+
+---> It's going to learn your unique historical patterns,and then it will detect one-time cost spikes and/or continuous cost increases.(And you don't have to define anything like threshold,forecast)
+
+--->Alerts when your bill suddenly increases
+
+16)AWS Service Quotas:-
+
+--->So the idea is that with AWS, you have limits and these limits are called quotas.And sometimes you may hit them.For example, you may get close to how many Lambda functions you can run at the same time
+
+--->And you wanna be notified whenever you hit these limits because they're important limits in your accounts. For this, you can use the service quota service.So you can create CloudWatch Alarms directly on the Service Quotas console and get alerted.
+
+--->AWS Service Quotas is a Global Service ,The Quotas apply per region for most services.
+
+
+17)AWS Trusted Advisor:-
+
+--->AWS Trusted Advisor is a monitoring and recommendation service that automatically checks your AWS environment and gives suggestions to improve performance, security, and cost optimization.
+--->Cost-saving and security recommendations
+--->AWS Trusted Advisor is an online tool that provides you real time guidance to help you provision your resources following AWS best practices, including performance, security, and fault tolerance, but also cost optimization and service limits.
+
+18)AWS support plan pricing
+
+Feature	                          Basic 	Developer	Business	Enterprise
+24/7 Technical Support	            ❌	           ❌	           ✅          	✅
+Response Time	                    ❌	         12-24 Hours	  1 Hour	15 Minutes
+AWS Trusted Advisor	         6 Checks	   Full	           Full	        Full
+Infrastructure Support	            ❌	            ❌             ✅	        ✅
+AWS Well-Architected Review	    ❌	            ❌             ❌   	✅
+Dedicated Account Manager	    ❌	            ❌	            ❌   	✅
+
+Basic (Free):-
+
+--->Documentation, Trusted Advisor (only 6 checks), AWS Health Dashboard
+
+Developer:-
+
+--->Email Support (Business Hours), Best Practice Guidance
+
+Business:-
+
+--->24/7 Phone & Chat Support, Trusted Advisor (Full Checks), Infrastructure Support
+
+Enterprise:-
+
+--->Dedicated Account Manager, 24/7 Support, Fastest Response Time, Proactive Guidance
+
+19)Service control policies (SCPs):-
+--->Service control policies (SCPs) are a type of organization policy that you can use to manage permissions in your organization. An SCP spans all IAM users, groups, and roles, including the AWS account root user.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
